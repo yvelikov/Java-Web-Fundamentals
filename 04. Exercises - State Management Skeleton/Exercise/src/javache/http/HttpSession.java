@@ -8,4 +8,9 @@ public interface HttpSession {
 
     Map<String, Object> getSessionData(String sessionId);
 
+    void removeSession(String sessionId);
+
+    boolean hasSession(String sessionId);
+
+
 }

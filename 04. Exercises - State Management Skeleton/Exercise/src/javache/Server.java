@@ -1,5 +1,7 @@
 package javache;
 
+import db.Repository;
+import db.RepositoryImpl;
 import javache.http.HttpSession;
 import javache.http.HttpSessionImpl;
 
@@ -20,6 +22,8 @@ public class Server {
 
     private ServerSocket server;
 
+    private Repository repository;
+
     public Server(int port) {
         this.port = port;
         this.timeouts = 0;
@@ -32,13 +36,14 @@ public class Server {
         this.server.setSoTimeout(SOCKET_TIMEOUT_MILLISECONDS);
 
         HttpSession session = new HttpSessionImpl();
+        this.repository = new RepositoryImpl();
 
         while(true) {
             try(Socket clientSocket = this.server.accept()) {
                 clientSocket.setSoTimeout(SOCKET_TIMEOUT_MILLISECONDS);
 
                 ConnectionHandler connectionHandler
-                        = new ConnectionHandler(clientSocket, new RequestHandler(session));
+                        = new ConnectionHandler(clientSocket, new RequestHandler(session, repository));
 
                 FutureTask<?> task = new FutureTask<>(connectionHandler, null);
                 task.run();

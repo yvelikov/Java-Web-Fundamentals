@@ -64,7 +64,7 @@ public class HttpResponseImpl implements HttpResponse {
         if (!this.headers.containsKey("Set-Cookie")) {
             this.headers.put("Set-Cookie", cookieString);
         } else {
-            this.headers.put("Set-Cookie", this.headers.get("Set-Cookie") + "; " + cookie);
+            this.headers.put("Set-Cookie", this.headers.get("Set-Cookie") + "; " + cookieString);
         }
     }
 

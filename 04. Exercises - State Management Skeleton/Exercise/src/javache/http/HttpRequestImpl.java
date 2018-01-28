@@ -1,5 +1,7 @@
 package javache.http;
 
+import javache.WebConstants;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.Arrays;
@@ -56,7 +58,7 @@ public class HttpRequestImpl implements HttpRequest {
         int i = 1;
 
         while(i < requestParams.size() && requestParams.get(i).length() > 0) {
-            String[] headerKeyValuePair = requestParams.get(i).split("\\:\\s");
+            String[] headerKeyValuePair = requestParams.get(i).split(":\\s");
 
             this.addHeader(headerKeyValuePair[0], headerKeyValuePair[1]);
 
@@ -65,16 +67,16 @@ public class HttpRequestImpl implements HttpRequest {
     }
 
     private void initBodyParameters(String requestContent) {
-        if(this.getMethod().equals("POST")) {
+        if(this.getMethod().equals(WebConstants.POST_METHOD)) {
             this.bodyParameters = new HashMap<>();
 
             List<String> requestParams = Arrays.asList(requestContent.split("\\r\\n"));
 
             if(requestParams.size() > this.headers.size() + 2) {
-                List<String> bodyParams = Arrays.asList(requestParams.get(this.headers.size() + 2).split("\\&"));
+                List<String> bodyParams = Arrays.asList(requestParams.get(this.headers.size() + 2).split("&"));
 
                 for (int i = 0; i < bodyParams.size(); i++) {
-                    String[] bodyKeyValuePair = bodyParams.get(i).split("\\=");
+                    String[] bodyKeyValuePair = bodyParams.get(i).split("=");
 
                     try {
                         this.addBodyParameter(bodyKeyValuePair[0], URLDecoder.decode(bodyKeyValuePair[1], "UTF-8"));
