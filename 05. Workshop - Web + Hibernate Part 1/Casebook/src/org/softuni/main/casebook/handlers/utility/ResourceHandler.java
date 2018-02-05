@@ -28,9 +28,9 @@ public class ResourceHandler extends BaseHandler{
             byte[] content = Files.readAllBytes(Paths.get(STATIC_RESOURCES_FULL_PATH + resourceUrl));
 
             response.setStatusCode(HttpStatus.OK);
-            request.addHeader(WebConstants.CONTENT_TYPE_HEADER, this.getContentType(resourceExtension));
-            request.addHeader("Content-Length", String.valueOf(content.length));
-            request.addHeader("Content-Disposition", "inline");
+            response.addHeader(WebConstants.CONTENT_TYPE_HEADER, this.getContentType(resourceExtension));
+            response.addHeader("Content-Length", String.valueOf(content.length));
+            response.addHeader("Content-Disposition", "inline");
             response.setContent(content);
 
             return response;
