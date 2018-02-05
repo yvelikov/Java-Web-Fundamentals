@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="javache-lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Skeleton-Server/out/artifacts/javache_lib/javache-lib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

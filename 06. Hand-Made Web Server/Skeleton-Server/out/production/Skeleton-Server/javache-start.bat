@@ -1,0 +1,1 @@
+java -cp ./ org.softuni.javache.StartUp

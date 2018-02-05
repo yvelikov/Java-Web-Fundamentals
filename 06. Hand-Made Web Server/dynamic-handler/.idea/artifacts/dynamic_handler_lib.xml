@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="dynamic-handler-lib">
+    <output-path>$PROJECT_DIR$/out/artifacts/dynamic_handler_lib</output-path>
+    <root id="archive" name="dynamic-handler-lib.jar">
+      <element id="directory" name="org">
+        <element id="directory" name="softuni">
+          <element id="directory" name="web">
+            <element id="directory" name="extensions">
+              <element id="directory" name="handlers">
+                <element id="directory" name="lib">
+                  <element id="file-copy" path="$PROJECT_DIR$/out/production/dynamic-handler/org/softuni/web/extensions/handlers/lib/Application.class" />
+                </element>
+                <element id="file-copy" path="$PROJECT_DIR$/out/production/dynamic-handler/org/softuni/web/extensions/handlers/DynamicApplicationRequestHandler.class" />
+              </element>
+            </element>
+          </element>
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

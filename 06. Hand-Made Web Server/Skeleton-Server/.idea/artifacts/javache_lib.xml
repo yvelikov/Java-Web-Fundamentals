@@ -1,0 +1,36 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="javache-lib">
+    <output-path>$PROJECT_DIR$/out/artifacts/javache_lib</output-path>
+    <root id="archive" name="javache-lib.jar">
+      <element id="directory" name="org">
+        <element id="directory" name="softuni">
+          <element id="directory" name="javache">
+            <element id="directory" name="http">
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/Skeleton-Server/org/softuni/javache/http/HTMLEncoder.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/Skeleton-Server/org/softuni/javache/http/HttpContext.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/Skeleton-Server/org/softuni/javache/http/HttpContextImpl.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/Skeleton-Server/org/softuni/javache/http/HttpCookie.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/Skeleton-Server/org/softuni/javache/http/HttpCookieImpl.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/Skeleton-Server/org/softuni/javache/http/HttpRequest.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/Skeleton-Server/org/softuni/javache/http/HttpRequestImpl.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/Skeleton-Server/org/softuni/javache/http/HttpResponse$ResponseLines.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/Skeleton-Server/org/softuni/javache/http/HttpResponse.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/Skeleton-Server/org/softuni/javache/http/HttpResponseImpl.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/Skeleton-Server/org/softuni/javache/http/HttpSession.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/Skeleton-Server/org/softuni/javache/http/HttpSessionImpl.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/Skeleton-Server/org/softuni/javache/http/HttpSessionStorage.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/Skeleton-Server/org/softuni/javache/http/HttpSessionStorageImpl.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/Skeleton-Server/org/softuni/javache/http/HttpStatus.class" />
+            </element>
+            <element id="directory" name="lib">
+              <element id="directory" name="handler">
+                <element id="file-copy" path="$PROJECT_DIR$/out/production/Skeleton-Server/org/softuni/javache/lib/handler/RequestHandler.class" />
+                <element id="file-copy" path="$PROJECT_DIR$/out/production/Skeleton-Server/org/softuni/javache/lib/handler/AbstractRequestHandler.class" />
+              </element>
+            </element>
+          </element>
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
