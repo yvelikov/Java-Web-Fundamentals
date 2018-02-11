@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="casebook">
+    <output-path>$PROJECT_DIR$/out/artifacts/casebook</output-path>
+    <root id="archive" name="casebook.jar">
+      <element id="file-copy" path="$PROJECT_DIR$/out/production/Casebook/IndexSolet.class" />
+      <element id="library" level="project" name="javache" />
+      <element id="library" level="project" name="solet" />
+      <element id="file-copy" path="$PROJECT_DIR$/out/production/Casebook/TestSolet.class" />
+    </root>
+  </artifact>
+</component>
