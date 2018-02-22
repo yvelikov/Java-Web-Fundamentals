@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="javache">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/javache.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/solet.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
